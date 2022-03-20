@@ -119,11 +119,14 @@ class LoadingScreen extends MusicBeatState {
 
     override function update(elapsed:Float) {
         super.update(elapsed);
-
+	    
+	for (touch in FlxG.touches.list)
+	{
         if (touch.justPressed && finished && !keypressed) {
             finish();
             keypressed = true;
         }
+	}
     }
 
     function finish() {
