@@ -85,6 +85,8 @@ class CreditsState extends MusicBeatState
 		#end
 
 		var pisspoop:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
+			['C PORT'],
+			['MarioMaster',		    'mariomaster',		    'Speedrun de port',	 'https://www.youtube.com/c/MarioMaster1997',	'0xFFD10616'],
 			['Vs Gorefield Team'],
 			['Jloor',		'jloor',		'Director/Main Programmer of Gorefield',						'https://twitter.com/GamerJloor',	'ffece5'],
 			['Zero Artist',			'zero',		'Co-Director/Main Artist/Animator of Gorefield',					'https://twitter.com/zero_artist02',		'936cbc'],
