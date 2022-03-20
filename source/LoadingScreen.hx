@@ -48,12 +48,13 @@ class LoadingScreen extends MusicBeatState {
 
     override public function create() {
         trace(playstateInfo["songLowerCase"]);
-
-        super.create();
-	
+	    
 	#if android
 	addVirtualPad(NONE, A);
         #end
+
+        super.create();
+	
 
         FlxG.sound.music.stop();
 
