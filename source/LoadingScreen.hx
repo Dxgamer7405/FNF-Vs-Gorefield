@@ -48,10 +48,6 @@ class LoadingScreen extends MusicBeatState {
 
     override public function create() {
         trace(playstateInfo["songLowerCase"]);
-	    
-	#if android
-	addVirtualPad(NONE, A);
-        #end
 
         super.create();
 	
@@ -124,7 +120,7 @@ class LoadingScreen extends MusicBeatState {
     override function update(elapsed:Float) {
         super.update(elapsed);
 
-        if (FlxG.keys.justPressed.ENTER && finished && !keypressed) {
+        if (touch.justPressed && finished && !keypressed) {
             finish();
             keypressed = true;
         }
