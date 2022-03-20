@@ -115,6 +115,10 @@ class LoadingScreen extends MusicBeatState {
 
         assetStack = getAssets();
     }
+    
+    #if android
+	addVirtualPad(NONE, A);
+    #end
 
     override function update(elapsed:Float) {
         super.update(elapsed);
