@@ -50,6 +50,10 @@ class LoadingScreen extends MusicBeatState {
         trace(playstateInfo["songLowerCase"]);
 
         super.create();
+	
+	#if android
+	addVirtualPad(NONE, A);
+        #end
 
         FlxG.sound.music.stop();
 
@@ -115,10 +119,6 @@ class LoadingScreen extends MusicBeatState {
 
         assetStack = getAssets();
     }
-    
-    #if android
-	addVirtualPad(NONE, A);
-    #end
 
     override function update(elapsed:Float) {
         super.update(elapsed);
