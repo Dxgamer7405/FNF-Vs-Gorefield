@@ -50,6 +50,7 @@ class LoadingScreen extends MusicBeatState {
         trace(playstateInfo["songLowerCase"]);
 
         super.create();
+	
 
         FlxG.sound.music.stop();
 
@@ -118,11 +119,14 @@ class LoadingScreen extends MusicBeatState {
 
     override function update(elapsed:Float) {
         super.update(elapsed);
-
-        if (FlxG.keys.justPressed.ENTER && finished && !keypressed) {
+	    
+	for (touch in FlxG.touches.list)
+	{
+        if (touch.justPressed && finished && !keypressed) {
             finish();
             keypressed = true;
         }
+	}
     }
 
     function finish() {
